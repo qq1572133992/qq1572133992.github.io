@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>冒泡排序法 | Hexo</title>
+  <title>快速排序法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -166,119 +166,43 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
+      
 <section id="intro">
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>冒泡排序法</h1>
+    			<span class="post-meta">
+      <time datetime="2016-02-11T06:19:33.000Z" itemprop="datePublished">
+          2016-02-11
+      </time>
+    
+</span>
+                <h1>快速排序法</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-            <p>冒泡排序法 </p>
-<ul>
-<li>思路分析：法如其名，就是像冒泡一样，每次从数组当中 冒一个最大的数出来。 </li>
-<li>比如：2,4,1 // 第一次 冒出的泡是4 </li>
-<li>2,1,4 // 第二次 冒出的泡是 2 </li>
-<li>1,2,4 // 最后就变成这样</li>
-</ul>
-<p>$arr=array(1,43,54,62,21,66,32,78,36,76,39);<br>function getpao($arr)<br>{<br>  $len=count($arr);<br>  //设置一个空数组 用来接收冒出来的泡<br>  //该层循环控制 需要冒泡的轮数<br>  for($i=1;$i&lt;$len;$i++)<br>  { //该层循环用来控制每轮 冒出一个数 需要比较的次数<br>    for($k=0;$k&lt;$len-$i;$k++)<br>    {<br>       if($arr[$k]&gt;$arr[$k+1])<br>        {<br>            $tmp=$arr[$k+1];<br>            $arr[$k+1]=$arr[$k];<br>            $arr[$k]=$tmp;<br>        }<br>    }<br>  }<br>  return $arr;<br>} </p>
+      		<p>快速排序法<br>代码如下:</p>
+<p>function quick_sort($arr) {<br>    //先判断是否需要继续进行<br>    $length = count($arr);<br>    if($length &lt;= 1) {<br>        return $arr;<br>    }<br>    //如果没有返回，说明数组内的元素个数 多余1个，需要排序<br>    //选择一个标尺<br>    //选择第一个元素<br>    $base_num = $arr[0];<br>    //遍历 除了标尺外的所有元素，按照大小关系放入两个数组内<br>    //初始化两个数组<br>    $left_array = array();//小于标尺的<br>    $right_array = array();//大于标尺的<br>    for($i=1; $i&lt;$length; $i++) {<br>        if($base_num &gt; $arr[$i]) {<br>            //放入左边数组<br>            $left_array[] = $arr[$i];<br>        } else {<br>            //放入右边<br>            $right_array[] = $arr[$i];<br>        }<br>    }<br>    //再分别对 左边 和 右边的数组进行相同的排序处理方式<br>    //递归调用这个函数,并记录结果<br>    $left_array = quick_sort($left_array);<br>    $right_array = quick_sort($right_array);<br>    //合并左边 标尺 右边<br>    return array_merge($left_array, array($base_num), $right_array);<br>}</p>
 
             <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/02/11/冒泡排序法/" style="float: left;">
+        ← 冒泡排序法
+    </a>
+    
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
-<section id="process">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                <div class="timeline-centered">
-                    <div class="line"></div>
-                    <div class="present">Past</div>
-                    <div class="dot_tp"></div>
-                    <div class="born">Now</div>
-                    <div class="dot_bt"></div>
-                    
-                        <div class="timeline-entry">
-                            <div class="timeline-entry-inner">
-                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="number">1</span>
-                                </div>
-                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
-                                    <p>2014/06/12-Start</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="timeline-entry">
-                            <div class="timeline-entry-inner">
-                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="number">2</span>
-                                </div>
-                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
-                                    <p>2014/11/29-XXX</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="timeline-entry">
-                            <div class="timeline-entry-inner">
-                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="number">3</span>
-                                </div>
-                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
-                                    <p>2015/02/18-DDD</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="timeline-entry">
-                            <div class="timeline-entry-inner">
-                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
-                                    <span class="number">4</span>
-                                </div>
-                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
-                                    <p>More</p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                </div>
-                <!-- timeline-centered -->
-            </div>
-        </div>
-    </div>
-</section>
+
 
       
 <!-- ============================ Footer =========================== -->

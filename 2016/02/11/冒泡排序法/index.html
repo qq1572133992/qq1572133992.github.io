@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hello World | Hexo</title>
+  <title>冒泡排序法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -172,37 +172,36 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-02-11T01:14:47.505Z" itemprop="datePublished">
-          2017-02-11
+      <time datetime="2016-02-11T06:19:33.000Z" itemprop="datePublished">
+          2016-02-11
       </time>
     
 </span>
-                <h1>Hello World</h1>
+                <h1>冒泡排序法</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      		<p>冒泡排序法 </p>
+<ul>
+<li>思路分析：法如其名，就是像冒泡一样，每次从数组当中 冒一个最大的数出来。 </li>
+<li>比如：2,4,1 // 第一次 冒出的泡是4 </li>
+<li>2,1,4 // 第二次 冒出的泡是 2 </li>
+<li>1,2,4 // 最后就变成这样</li>
+</ul>
+<p>$arr=array(1,43,54,62,21,66,32,78,36,76,39);<br>function getpao($arr)<br>{<br>  $len=count($arr);<br>  //设置一个空数组 用来接收冒出来的泡<br>  //该层循环控制 需要冒泡的轮数<br>  for($i=1;$i&lt;$len;$i++)<br>  { //该层循环用来控制每轮 冒出一个数 需要比较的次数<br>    for($k=0;$k&lt;$len-$i;$k++)<br>    {<br>       if($arr[$k]&gt;$arr[$k+1])<br>        {<br>            $tmp=$arr[$k+1];<br>            $arr[$k+1]=$arr[$k];<br>            $arr[$k]=$tmp;<br>        }<br>    }<br>  }<br>  return $arr;<br>} </p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/02/11/fack-you/" style="float: left;">
-        ← fack you
+    <a class="pull-left" href="/2017/02/11/hello-world/" style="float: left;">
+        ← Hello World
     </a>
     
     
-    <a class="pull-right" href="/2016/02/11/冒泡排序法/">
-        冒泡排序法 →
+    <a class="pull-right" href="/2016/02/11/快速排序法/">
+        快速排序法 →
     </a>
     
 </nav>
