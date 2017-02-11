@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>pageName | Hexo</title>
+  <title>冒泡排序法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -79,9 +79,15 @@
                 <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/pageName" target="_BLANK" class="animsition-link">php</a></li>
+                        <li><a href="/category/php" target="_BLANK" class="animsition-link">php(12)</a></li>
                     
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">linux</a></li>
+                        <li><a href="/category/linux" target="_BLANK" class="animsition-link">linux(6)</a></li>
+                    
+                        <li><a href="/category/arithmetic" target="_BLANK" class="animsition-link">算法(5)</a></li>
+                    
+                        <li><a href="/category/nginx" target="_BLANK" class="animsition-link">nginx(2)</a></li>
+                    
+                        <li><a href="/category/else" target="_BLANK" class="animsition-link">其他(...)</a></li>
                     
                 </ul>
             </li>
@@ -200,11 +206,19 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>pageName</h1>
+                <h1>冒泡排序法</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-            
+            <p>冒泡排序法 </p>
+<ul>
+<li>思路分析：法如其名，就是像冒泡一样，每次从数组当中 冒一个最大的数出来。 </li>
+<li>比如：2,4,1 // 第一次 冒出的泡是4 </li>
+<li>2,1,4 // 第二次 冒出的泡是 2 </li>
+<li>1,2,4 // 最后就变成这样</li>
+</ul>
+<p>$arr=array(1,43,54,62,21,66,32,78,36,76,39);<br>function getpao($arr)<br>{<br>  $len=count($arr);<br>  //设置一个空数组 用来接收冒出来的泡<br>  //该层循环控制 需要冒泡的轮数<br>  for($i=1;$i&lt;$len;$i++)<br>  { //该层循环用来控制每轮 冒出一个数 需要比较的次数<br>    for($k=0;$k&lt;$len-$i;$k++)<br>    {<br>       if($arr[$k]&gt;$arr[$k+1])<br>        {<br>            $tmp=$arr[$k+1];<br>            $arr[$k+1]=$arr[$k];<br>            $arr[$k]=$tmp;<br>        }<br>    }<br>  }<br>  return $arr;<br>} </p>
+
             <div class="clearfix"></div>
         </div>
         
